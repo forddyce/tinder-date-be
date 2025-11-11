@@ -12,7 +12,7 @@ class LikeController extends Controller
 {
     /**
      * @OA\Post(
-     *     path="/api/people/{person}/like",
+     *     path="/v1/people/{person}/like",
      *     summary="Like a person",
      *     tags={"Interactions"},
      *     @OA\Parameter(
@@ -52,7 +52,7 @@ class LikeController extends Controller
 
     /**
      * @OA\Post(
-     *     path="/api/people/{person}/dislike",
+     *     path="/v1/people/{person}/dislike",
      *     summary="Dislike a person",
      *     tags={"Interactions"},
      *     @OA\Parameter(
@@ -92,7 +92,7 @@ class LikeController extends Controller
 
     /**
      * @OA\Get(
-     *     path="/api/people/liked",
+     *     path="/v1/people/liked",
      *     summary="Get list of liked people",
      *     tags={"Interactions"},
      *     @OA\Parameter(

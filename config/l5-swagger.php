@@ -12,7 +12,7 @@ return [
                 /*
                  * Route for accessing api documentation interface
                  */
-                'api' => 'api/documentation',
+                'api' => 'v1/documentation',
             ],
             'paths' => [
                 /*
@@ -59,7 +59,7 @@ return [
             /*
              * Route for Oauth2 authentication callback.
              */
-            'oauth2_callback' => 'api/oauth2-callback',
+            'oauth2_callback' => 'v1/oauth2-callback',
 
             /*
              * Middleware allows to prevent unexpected access to API documentation
@@ -81,7 +81,7 @@ return [
             /*
              * Absolute path to location where parsed annotations will be stored
              */
-            'docs' => storage_path('api-docs'),
+            'docs' => env('APP_ENV') === 'production' ? '/tmp/api-docs' : storage_path('api-docs'),
 
             /*
              * Absolute path to directory where to export views
@@ -237,7 +237,7 @@ return [
          * Set this to `true` in development mode so that docs would be regenerated on each request
          * Set this to `false` to disable swagger generation on production
          */
-        'generate_always' => env('L5_SWAGGER_GENERATE_ALWAYS', false),
+        'generate_always' => env('L5_SWAGGER_GENERATE_ALWAYS', env('APP_ENV') === 'production'),
 
         /*
          * Set this to `true` to generate a copy of documentation in yaml format
@@ -248,7 +248,7 @@ return [
          * Edit to trust the proxy's ip address - needed for AWS Load Balancer
          * string[]
          */
-        'proxy' => false,
+        'proxy' => '*',
 
         /*
          * Configs plugin allows to fetch external configs instead of passing them to SwaggerUIBundle.

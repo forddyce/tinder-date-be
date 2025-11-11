@@ -12,7 +12,7 @@ class PersonController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/api/people/recommended",
+     *     path="/v1/people/recommended",
      *     summary="Get recommended people",
      *     tags={"People"},
      *     @OA\Parameter(

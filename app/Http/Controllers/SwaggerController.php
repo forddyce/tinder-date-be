@@ -15,7 +15,7 @@ use OpenApi\Annotations as OA;
  *     description="Local API Server"
  * )
  * @OA\Server(
- *     url="https://your-vercel-app.vercel.app",
+ *     url="https://be-nine-flame.vercel.app/",
  *     description="Production API Server"
  * )
  */

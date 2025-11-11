@@ -1,7 +1,1 @@
-/storage/logs
-/storage/framework/cache
-/storage/framework/sessions
-/storage/framework/views
-.env.local
-.env.*.local
-node_modules
+/vendor
