@@ -22,10 +22,10 @@
     "APP_URL": "https://tinder-date-be-7wy7.vercel.app",
     "APP_CONFIG_CACHE": "/tmp/config.php",
     "APP_ROUTES_CACHE": "/tmp/routes.php",
-    "VIEW_COMPILED_PATH": "/tmp",
+    "VIEW_COMPILED_PATH": "/tmp/views",
     "CACHE_DRIVER": "array",
     "LOG_CHANNEL": "stderr",
-    "SESSION_DRIVER": "cookie",
+    "SESSION_DRIVER": "array",
     "APP_KEY": "base64:0RAyu6XOWmN8QwZyjP6e5I5//LFVOt9JWA4jJFOLCac="
   }
 }
