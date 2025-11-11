@@ -1,7 +1,31 @@
 {
+  "version": 2,
+  "framework": null,
   "functions": {
-    "api/*.php": {
-      "runtime": "vercel-php@0.7.4"
+    "api/index.php": {
+      "runtime": "vercel-php@0.7.4" 
     }
+  },
+  "routes": [
+    {
+      "src": "/(css|js|images|fonts|build)/(.+)",
+      "dest": "/public/$1/$2"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.php"
+    }
+  ],
+  "env": {
+    "APP_ENV": "production",
+    "APP_DEBUG": "true",
+    "APP_URL": "https://tinder-date-be-7wy7.vercel.app",
+    "APP_CONFIG_CACHE": "/tmp/config.php",
+    "APP_ROUTES_CACHE": "/tmp/routes.php",
+    "VIEW_COMPILED_PATH": "/tmp",
+    "CACHE_DRIVER": "array",
+    "LOG_CHANNEL": "stderr",
+    "SESSION_DRIVER": "cookie",
+    "APP_KEY": "base64:0RAyu6XOWmN8QwZyjP6e5I5//LFVOt9JWA4jJFOLCac="
   }
 }
