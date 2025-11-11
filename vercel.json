@@ -8,6 +8,18 @@
   ],
   "routes": [
     {
+      "src": "/api/oauth2-callback",
+      "dest": "/api/index.php"
+    },
+    {
+      "src": "/api/documentation",
+      "dest": "/api/index.php"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/index.php"
+    },
+    {
       "src": "/(.*)",
       "dest": "/api/index.php"
     }
