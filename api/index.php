@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
+<?php
 
-mkdir -p /tmp/storage/framework/{sessions,views,cache}
-mkdir -p /tmp/storage/logs
+require __DIR__.'/../public/index.php';
